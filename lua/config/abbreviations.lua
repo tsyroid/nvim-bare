@@ -1,5 +1,7 @@
--- Ababreviations
--- Because I don't know how to integration my separate abbreviations.lua file into /config/
+-- nvim/lua/config/abbreviations.lua
+-- inoreabbrev (Insert mode abbreviations)
+-- iabbrev (Insert and command-line mode abbreviations)
+
 vim.cmd([[
 
 inoreabbrev @@ tsyroid at gmail.com
