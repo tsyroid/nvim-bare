@@ -2,24 +2,35 @@
 -- Nvim options
 -- See `:help vim.opt` or `:help option-list`
 
+-- Tabs and indentation
+-- Consider commenting this out if using tpope/vim-sleuth
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.expandtab = true
+vim.opt.autoindent = true
+
 -- Make line numbers default and relative
 vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
-vim.opt.mouse = 'a'
+vim.opt.mouse = "a"
 
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
 
 -- Sync clipboard between OS and Neovim.
 --  See `:help 'clipboard'`
-vim.opt.clipboard = 'unnamedplus'
+vim.opt.clipboard = "unnamedplus"
 
 -- Enable break indent and wrap
 vim.opt.breakindent = true
 vim.opt.wrap = true
 vim.opt.linebreak = true
+
+-- Enable termguicolors; required for tokyonight dark to render correctly
+vim.opt.termguicolors = true
+vim.opt.background = "dark"
 
 -- Save undo history
 vim.opt.undofile = true
@@ -30,7 +41,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 -- Keep signcolumn on by default
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = "yes"
 
 -- Decrease update time
 vim.opt.updatetime = 250
@@ -46,13 +57,13 @@ vim.opt.splitbelow = true
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'` and `:help 'listchars'`
 vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 -- backspace
-vim.opt.backspace = 'indent,eol,start' -- allow backspace on indent, end of line or insert mode start position
+vim.opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
 
 -- Preview substitutions
-vim.opt.inccommand = 'split'
+vim.opt.inccommand = "split"
 
 -- Turn off swapfile
 vim.opt.swapfile = false
@@ -65,30 +76,5 @@ vim.opt.scrolloff = 20
 
 -- For markdown files in Obsidian
 -- vim.opt.conceallevel = 1
-
--- Ababreviations
--- Because I don't know how to integration my separate abbreviations.lua file into /config/
-vim.cmd([[
-
-inoreabbrev @@ tsyroid at gmail.com
-inoreabbrev ccopy Copyright 2024 Tom Syroid, all rights reserved.
-
-inoreabbrev Tdate <C-R>=strftime("%Y-%m-%d")<CR>
-inoreabbrev Gdate <C-R>=strftime("%FT%T")<CR>
-iabbrev DT <C-R>=strftime("%Y-%m-%d @ %H:%M")<CR>
-iabbrev dt <C-R>=strftime("%a %b %d %Y %T %Z")<CR>
-
-inoreabbrev tasko - [ ]
-inoreabbrev taskc - [x]
-
-inoreabbrev seperate separate
-inoreabbrev definately definitely
-inoreabbrev accomadate accommodate
-inoreabbrev dont don't
-inoreabbrev btw by the way
-inoreabbrev im I'm
-inoreabbrev youre you're
-
-]])
 
 -- vim: ts=2 sts=2 sw=2 et
