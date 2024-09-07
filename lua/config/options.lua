@@ -4,10 +4,10 @@
 
 -- Tabs and indentation
 -- Consider commenting this out if using tpope/vim-sleuth
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
-vim.opt.autoindent = true
+-- vim.opt.tabstop = 2
+-- vim.opt.shiftwidth = 2
+-- vim.opt.expandtab = true
+-- vim.opt.autoindent = true
 
 -- Make line numbers default and relative
 vim.opt.number = true
